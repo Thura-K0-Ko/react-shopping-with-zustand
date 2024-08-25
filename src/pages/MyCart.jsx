@@ -6,7 +6,7 @@ import CartSection from "../components/CartSection";
 const MyCart = () => {
   return (
     <Container>
-      <div>
+      <div className=" flex flex-col min-h-screen " >
         <BreadCrumb currentPageTitle={"My Cart"} />
         <CartSection />
       </div>
