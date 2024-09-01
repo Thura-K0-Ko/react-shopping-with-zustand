@@ -20,7 +20,7 @@ const CartSection = () => {
   const netTotal = total + tax;
 
   return (
-    <div className="flex flex-col gap-5 h-full">
+    <div className="flex flex-col gap-5 ">
       {/* =============emptyCartImg and cartItem============ */}
       {carts.length === 0 ? (
         <img
@@ -36,8 +36,8 @@ const CartSection = () => {
         </div>
       )}
       {/* ===============total and orderNow Btn============= */}
-      <div className=" absolute bottom-0 left-0 w-full bg-white mt-auto">
-        <Container className="px-5 ">
+      <div className=" w-full bg-white mt-auto">
+        
           <div className=" border-t border-black flex justify-end gap-10 py-3">
             <div className=" text-right">
               <p className=" text-gray-500">Total</p>
@@ -55,7 +55,7 @@ const CartSection = () => {
           <div className=" text-end mb-5">
             <Link className=" border border-black px-4 py-2 ">Order Now</Link>
           </div>
-        </Container>
+  
       </div>
     </div>
   );
