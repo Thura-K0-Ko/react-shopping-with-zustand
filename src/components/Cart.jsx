@@ -45,11 +45,11 @@ const Cart = ({ id, productId, quantity }) => {
         <p className=" text-gray-500">Price ( $ {product.price})</p>
       </div>
       <div className=" col-span-1">
-        <p className=" mb-2  text-center">Quantity</p>
-        <div className=" flex flex-col sm:flex-row gap-1 sm:justify-center  items-center text-center sm:gap-2">
+        <p className=" mb-2">Quantity</p>
+        <div className=" flex  gap-2">
           <button
             onClick={handleDecreaseBtn}
-            className=" bg-black px-2.5 text-white"
+            className=" bg-black px-2 text-white"
           >
             -
           </button>
@@ -63,7 +63,7 @@ const Cart = ({ id, productId, quantity }) => {
         </div>
       </div>
       <div className=" col-span-1 ">
-        <p className=" text-end font-bold text-xl  mt-10 sm:mt-3 ">
+        <p className=" text-end font-bold text-sm sm:text-xl mt-3 ">
           {" "}
           $ {cost.toFixed(2)}
         </p>

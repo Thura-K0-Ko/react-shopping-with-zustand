@@ -17,7 +17,7 @@ const ProductSection = () => {
           Available Product Lists
         </p>
 
-        <div className=" grid grid-cols-1 w-full sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className=" grid w-full  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {products.filter(el=>el.category===currentCategory.name || currentCategory.name==="All").map((product) => (
             <ProductCart key={product.id} {...product} />
           ))}

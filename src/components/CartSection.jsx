@@ -20,24 +20,24 @@ const CartSection = () => {
   const netTotal = total + tax;
 
   return (
-    <>
-
-        {/* =============emptyCartImg and cartItem============ */}
-        {carts.length === 0 ? (
-          <img
-            src={emptyCartImg}
-            className=" w-[200px] mx-auto my-16"
-            alt="empty"
-          />
-        ) : (
-          <div className="flex flex-col gap-3  ">
-            {carts.map((cart) => (
-              <Cart key={cart.id} {...cart} />
-            ))}
-          </div>
-        )}
-        {/* ===============total and orderNow Btn============= */}
-        <div className="  w-full bg-white mt-5 ">
+    <div className="flex flex-col gap-5 h-full">
+      {/* =============emptyCartImg and cartItem============ */}
+      {carts.length === 0 ? (
+        <img
+          src={emptyCartImg}
+          className=" w-[200px] mx-auto mt-10"
+          alt="empty"
+        />
+      ) : (
+        <div className="flex flex-col gap-3 flex-grow-3">
+          {carts.map((cart) => (
+            <Cart key={cart.id} {...cart} />
+          ))}
+        </div>
+      )}
+      {/* ===============total and orderNow Btn============= */}
+      <div className=" absolute bottom-0 left-0 w-full bg-white mt-auto">
+        <Container className="px-5 ">
           <div className=" border-t border-black flex justify-end gap-10 py-3">
             <div className=" text-right">
               <p className=" text-gray-500">Total</p>
@@ -55,9 +55,9 @@ const CartSection = () => {
           <div className=" text-end mb-5">
             <Link className=" border border-black px-4 py-2 ">Order Now</Link>
           </div>
-        </div>
-  
-    </>
+        </Container>
+      </div>
+    </div>
   );
 };
 
